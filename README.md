@@ -1,17 +1,37 @@
-# Progetto Wordle - Versioni 1.0 e 2.0
+# Progetto Wordle Game
 
-Benvenuti nel repository del Progetto Wordle! Questo repository ospita due versioni distinte del gioco Wordle semplificato.
+**Laboratorio Reti 22-23 - UniPi**
 
-## Progetto Wordle 1.0
+## Instruzioni per l'installazione e l'esecuzione del gioco Wordle
 
-Questa versione offre un'esperienza di gioco essenziale e diretta, focalizzata sulla funzionalità di base del gioco Wordle.
-La versione 1.0 **è priva di una GUI** (Interfaccia Grafica Utente), offrendo un'esperienza di gioco semplice e lineare tramite la riga di comando.
+Per eseguire il gioco, ci sono due metodi disponibili:
 
-## Progetto Wordle 2.0
+### 1. Esecuzione Da Riga di Comando
 
-La versione 2.0, **dotata di una GUI** intuitiva, semplifica la navigazione nel gioco, migliorandone l'usabilità e l'interattività.
+#### Passi per Compilare ed Eseguire il Gioco:
 
+##### A. Server
+1. Entrare nella cartella `src`.
+2. Aprire un terminale dedicato all'avvio del **server**.
+3. Sul terminale del server:
+   - **Per compilare**: 
+     - Su Linux: `javac -d ./../out -cp ".:gson-2.8.2.jar" WordleServerMain.java`
+     - Su Windows: `javac -d ./../out -cp ".;gson-2.8.2.jar" WordleServerMain.java`
+   - **Per eseguire**: 
+     - Su Linux: `java -cp "./../out/:gson-2.8.2.jar" WordleServerMain`
+     - Su Windows: `java -cp "./../out/;gson-2.8.2.jar" WordleServerMain`
 
-## Come Iniziare
+##### B. Client
+1. Aprire due (o più) terminali dedicati al **client** per testare concorrenza e condivisione del risultato di una partita.
+2. Sul terminale del client:
+   - **Per compilare**: 
+     - Su Windows: `javac -encoding UTF-8 -d ./../out WordleClientMain.java`
+     - Su Linux: `javac -d ./../out WordleClientMain.java`
+   - **Per eseguire** (su Linux/Windows): `java -cp ./../out WordleClientMain`
 
-Per iniziare a giocare seguire le istruzioni contenute nei rispettivi file README all'interno delle cartelle del progetto.
+### 2. Utilizzo dei File Eseguibili JAR
+
+#### Passi per Eseguire il Gioco:
+
+1. **Server**: Sul terminale, eseguire `java -jar server.jar`.
+2. **Client**: Sul terminale, eseguire `java -jar client.jar`.
